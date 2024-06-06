@@ -10,7 +10,7 @@ import LargeLanguageModels
 
 struct AIIntelligenceManager {
     
-    static let client = OpenAI.APIClient(apiKey: "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")
+    static let client = OpenAI.Client(apiKey: "YOUR_API_KEY")
     static let intelligence: any LLMRequestHandling & TextEmbeddingsRequestHandling = AIIntelligenceManager.client
     static let embeddingModel = OpenAI.Model.embedding(.text_embedding_3_small)
     static let chatModel = OpenAI.Model.chat(.gpt_3_5_turbo)
