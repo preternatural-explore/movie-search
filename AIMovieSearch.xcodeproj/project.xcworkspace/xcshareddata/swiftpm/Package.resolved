@@ -1,0 +1,96 @@
+{
+  "originHash" : "94d8c320ca20b3031a41ba27074176b8d77ee421a9498058cddbe2f6bc611336",
+  "pins" : [
+    {
+      "identity" : "ai",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PreternaturalAI/AI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "60f1c7b3db7c0fefb78490e3efc79063dab1d251"
+      }
+    },
+    {
+      "identity" : "corepersistence",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vmanot/CorePersistence.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8e743e026fcdc850f9ad77823ada5485c7cf64f8"
+      }
+    },
+    {
+      "identity" : "merge",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vmanot/Merge.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "777810a0e215f61558969dcd8bdae464d208db25"
+      }
+    },
+    {
+      "identity" : "networkkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vmanot/NetworkKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "01cd6091ddf244840e143dfa2fc1f176621786f2"
+      }
+    },
+    {
+      "identity" : "starratingviewswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/magickworx/StarRatingViewSwiftUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5d7e29d98b8e26c75e1eddc812c15a7ec1349d53"
+      }
+    },
+    {
+      "identity" : "swallow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vmanot/Swallow.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "92f279cdfcc19bc51ed485c750e6c91a9d4191cc"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
+        "version" : "510.0.1"
+      }
+    },
+    {
+      "identity" : "swiftapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vmanot/SwiftAPI.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6accdc5ba311b75dfc2866f355be98a89cb7fce2"
+      }
+    },
+    {
+      "identity" : "swiftuix",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftUIX/SwiftUIX.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "95e399ac149577d6996a7c62c90282d06373a3b7"
+      }
+    }
+  ],
+  "version" : 3
+}
