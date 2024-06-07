@@ -13,8 +13,8 @@ static let client = OpenAI.Client(apiKey: "YOUR_API_KEY")
 
 *You can get the OpenAI API key on the [OpenAI developer website](https://platform.openai.com/). Note that you have to set up billing and add a small amount of money for the API calls to work (this will cost you less than 1 dollar).* 
 
-1. Run the project on the Mac, iPad, or iPhone
-2. Search for movies using natural language. For example: 
+3. Run the project on the Mac, iPad, or iPhone
+4. Search for movies using natural language. For example: 
 
 The app returns the following results for “romantic movie in new york”:
 
