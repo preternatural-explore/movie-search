@@ -17,9 +17,10 @@ static let client = OpenAI.Client(apiKey: "YOUR_API_KEY")
 3. Run the project on the Mac, iPad, or iPhone
 4. Search for movies using natural language. For example: 
 
-The app returns the following results for “romantic movie in new york”:
+The app returns the following results for “movies about time travel”:
 
-![file (1)](https://github.com/preternatural-explore/AIMovieSearch/assets/1157147/c0149695-3282-40a2-b117-43febd938c78)
+<img width="1280" alt="export533D506A-68B5-47FE-B166-9DE02C94AB6F" src="https://github.com/preternatural-explore/AIMovieSearch/assets/1157147/51495e50-6a7b-424a-b1b9-356dfe914de8">
+
 
 Other searches to try out: 
 
