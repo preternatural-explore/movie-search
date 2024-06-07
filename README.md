@@ -1,4 +1,5 @@
 # AI-Powered Movie Search App
+The AIMovieSearch app is an example of how to add AI-powered search to any application. This app demonstrates key concepts such as working with the OpenAI API, structuring training data, utilizing text embeddings, and implementing Retrieval-Augmented Generation (RAG). By leveraging advanced AI techniques, the AIMovieSearch app enables users to search for movies using natural language queries, providing a more intuitive and efficient search experience.
 
 ## Running the App
 To run the AI Movie Search app: 
