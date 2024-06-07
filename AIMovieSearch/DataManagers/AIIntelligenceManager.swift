@@ -32,11 +32,11 @@ struct AIIntelligenceManager {
     static func messagesForText(_ text: String) -> [AbstractLLM.ChatMessage] {
         /// This is an example of few-shot prompting (i.e. using example task inputs+outputs).
         ///
-        /// We do this so that GPT knows that it is only supposed to answer with the string and nothing more. If we don't add the examples, it'll add random text like "Sure! I can help you with that" 🤮
+        /// We do this so that GPT knows that it is only supposed to answer with the string and nothing more. If we don't add the examples, it'll add random text like "Sure! I can help you with that"
         ///
         /// https://docs.anthropic.com/claude/docs/use-examples
-        [
-            AbstractLLM.ChatMessage.system {
+        let messages: [AbstractLLM.ChatMessage] = [
+            .system {
                 """
                 You are MovieSearchGPT.
                 
@@ -47,32 +47,33 @@ struct AIIntelligenceManager {
                 Remember, you must ONLY return the modified search query. NOTHING more.
                 """
             },
-            AbstractLLM.ChatMessage.user {
+            .user {
                 """
                 sci-fi
                 """
             },
-            AbstractLLM.ChatMessage.assistant {
+            .assistant {
                 """
                 A science fiction (sci-fi) movie or film.
                 """
             },
-            AbstractLLM.ChatMessage.user {
+            .user {
                 """
                 A film where two people get really sad after falling in love and then breaking up.
                 """
             },
-            AbstractLLM.ChatMessage.assistant {
+           .assistant {
                 """
                 A movie where the plot is a romantic drama that ends in tragedy.
                 """
             },
-            AbstractLLM.ChatMessage.user {
+            .user {
                 """
                 \(text)
                 """
             }
         ]
+        return messages
     }
 }
 
