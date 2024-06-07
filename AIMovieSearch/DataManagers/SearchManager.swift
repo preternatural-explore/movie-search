@@ -40,7 +40,6 @@ class SearchManager: Logging  {
         
         logger.info("Searching with final query: \(text)")
         
-        // TODO: @vmanot improve API
         let searchEmbedding: [Double] = try await intelligence.textEmbedding(
             for: text,
             model: AIIntelligenceManager.embeddingModel

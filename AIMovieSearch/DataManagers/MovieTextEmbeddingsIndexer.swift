@@ -55,7 +55,6 @@ class MovieTextEmbeddingsIndexer {
             model: AIIntelligenceManager.embeddingModel
         )
         
-        // TODO: @vmanot - simplify the API here
         let embeddingsWithIDs = embeddings.enumerated().map({
             (
                 descriptionsByID.elements[$0.offset].key.stringValue,
