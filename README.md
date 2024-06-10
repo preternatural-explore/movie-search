@@ -33,17 +33,17 @@ Other searches to try out:
 
 ## Table of Contents
 - [Key Concepts](#key-concepts)
-- [Why Use Text Embeddings for Search?](#why-use-ai-for-search)
-- [The Movie Search App Example](#the-ai-movie-search-app-example)
-- [Concepts to Understand](#ai-concepts-to-understand)
+- [Why Use Text Embeddings for Search?](#why-use-text-embeddings-for-search)
+- [The Movie Search App Example](#the-movie-search-app-example)
+- [Concepts to Understand](#concepts-to-understand)
   - [Text Embeddings](#text-embeddings)
   - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-- [Movie Search Implementation](#ai-movie-search-implementation)
+- [Movie Search Implementation](#movie-search-implementation)
   - [1. Preparing the Data](#1-preparing-the-data)
   - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
   - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
     - [3a. Use an LLM to Modify the Search Query](#3a-use-an-llm-to-modify-the-search-query)
-    - [3b: Now Convert the Modified Search Query into a Text Embedding](#3b-now-convert-the-modified-search-query-into-a-text-embedding)
+    - [3b. Now Convert the Modified Search Query into a Text Embedding](#3b-now-convert-the-modified-search-query-into-a-text-embedding)
   - [4. Using Vector Search](#4-using-vector-search)
 - [Conclusion](#conclusion)
 - [FAQ](#faq)
@@ -52,7 +52,7 @@ Other searches to try out:
 
 ## Key Concepts
 
-The AI Movie Search app is developed to demonstrate the the following key concepts:
+The Movie Search app is developed to demonstrate the the following key concepts:
 
 - How to work with the OpenAI API using the AI framework
 - How to Structure Training Data to Experiment With
@@ -67,7 +67,7 @@ In traditional software development, search is very limited. Customers are expec
 
 However, this search methodology doesn’t work in the way we, as humans, think when searching. Sometimes we want to search for “that email about what everyone is supposed to bring to the family reunion party” or “the email from my accountant with my 2022 tax return”.  By integrating AI into the search process, we can create a search experience that is natural language based, allowing for a much more effortless search experience. 
 
-## The AI Movie Search App Example
+## The Movie Search App Example
 
 We will use the example of a Movie Plots App (similar to IMBD) to illustrate how to integrate AI-powered search into any application. This app helps customers decide which movie they want to watch. Instead of entering movie titles directly, customers search freely for:
 
@@ -87,7 +87,7 @@ We will use the example of a Movie Plots App (similar to IMBD) to illustrate how
 
 Run the app and experiment with some of the above search queries to see the results!
 
-## AI Concepts to Understand
+## Concepts to Understand
 
 Before going into the implementation details for the Movie Search app, there are two concepts which are important to understand:
 
@@ -128,7 +128,7 @@ This RAG pipeline can be conceptually broken down into the following steps:
 
 The AI Movie Search app uses the RAG strategy. The app itself has a database (in the form a csv) of movie information, which the LLM will be using as the external source of data to search through. The exact implementation is slightly different than the simplified version above, the details of which are in the implementation section below. 
 
-## AI Movie Search Implementation
+## Movie Search Implementation
 
 ### 1. Preparing the Data
 
@@ -348,7 +348,7 @@ The interesting part here is that there is not only one search result, but many 
 
 ### Conclusion
 
-To implement AI-powered Search in the Movie App, we utilized the Retrieval-Augmented Generation (RAG) strategy. Instead of directly using OpenAI’s LLM, which lacks access to our specific dataset, we employed their text embeddings model to break down the text into their established token mappings.  
+To implement semantic search using text embeddings in the Movie App, we utilized the Retrieval-Augmented Generation (RAG) strategy. Instead of directly using OpenAI’s LLM, which lacks access to our specific dataset, we employed their text embeddings model to break down the text into their established token mappings.  
 
 We then modified the user query to match our dataset style and transformed the revised search query using the same text embeddings model as the dataset. Once the embeddings were set, we applied a simple cosine similarity search via Apple's `Accelerate` framework to calculate the movie text embeddings that were closest mathematically to the user's search query embedding. This process yielded a list of results with relevance scores.
 
