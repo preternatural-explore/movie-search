@@ -1,5 +1,5 @@
 # Movie Search: Semantic search for movies using text-embeddings.
-The MovieSearch app is an example of how to use text embeddings to add search to any application. This app demonstrates key concepts such as working with the OpenAI API, structuring training data, utilizing text embeddings, and implementing Retrieval-Augmented Generation (RAG). By leveraging advanced AI techniques, the AIMovieSearch app enables users to search for movies using natural language queries, providing a more intuitive and efficient search experience.
+The MovieSearch app enables users to search for movies using natural language queries, providing a more intuitive and efficient search experience. This app demonstrates working with the OpenAI API, structuring training data, implementing Retrieval-Augmented Generation (RAG), and using text embeddings to add semantic search to any application.
 
 ## Installation
 To install and run the Movie Search app: 
