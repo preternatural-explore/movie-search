@@ -33,12 +33,12 @@ Other searches to try out:
 
 ## Table of Contents
 - [Key Concepts](#key-concepts)
-- [Why Use AI for Search?](#why-use-ai-for-search)
-- [The AI Movie Search App Example](#the-ai-movie-search-app-example)
-- [AI Concepts to Understand](#ai-concepts-to-understand)
+- [Why Use Text Embeddings for Search?](#why-use-ai-for-search)
+- [The Movie Search App Example](#the-ai-movie-search-app-example)
+- [Concepts to Understand](#ai-concepts-to-understand)
   - [Text Embeddings](#text-embeddings)
   - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-- [AI Movie Search Implementation](#ai-movie-search-implementation)
+- [Movie Search Implementation](#ai-movie-search-implementation)
   - [1. Preparing the Data](#1-preparing-the-data)
   - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
   - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
