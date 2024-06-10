@@ -2,7 +2,7 @@
 The MovieSearch app is an example of how to use text embeddings to add search to any application. This app demonstrates key concepts such as working with the OpenAI API, structuring training data, utilizing text embeddings, and implementing Retrieval-Augmented Generation (RAG). By leveraging advanced AI techniques, the AIMovieSearch app enables users to search for movies using natural language queries, providing a more intuitive and efficient search experience.
 
 ## Installation
-To install and run the AI Movie Search app: 
+To install and run the Movie Search app: 
 
 1. Download and open the project
 2. Open `AIIntelligenceManager` file in the `DataManagers` folder and add your OpenAI API key:  
