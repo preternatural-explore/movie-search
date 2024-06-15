@@ -65,7 +65,7 @@ Other searches to try out:
 ## Table of Contents
 - [Key Concepts](#key-concepts)
 - [Technical Specifications](#technical-implementation)
-	- [Why Use Text Embeddings for Search?](#why-use-text-embeddings-for-search)
+	- [Why Use AI for Search?](#why-use-ai-for-search)
 	- [The Movie Search App Example](#the-movie-search-app-example)
 	- [Concepts to Understand](#concepts-to-understand)
 	  - [Text Embeddings](#text-embeddings)
@@ -74,8 +74,6 @@ Other searches to try out:
 	  - [1. Preparing the Data](#1-preparing-the-data)
 	  - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
 	  - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
-	    - [3a. Use an LLM to Modify the Search Query](#3a-use-an-llm-to-modify-the-search-query)
-	    - [3b. Now Convert the Modified Search Query into a Text Embedding](#3b-now-convert-the-modified-search-query-into-a-text-embedding)
 	  - [4. Using Vector Search](#4-using-vector-search)
 	- [Conclusion](#conclusion)
 - [FAQ](#faq)
@@ -328,7 +326,7 @@ let searchEmbedding: [Double] = try await intelligence.textEmbedding(
 ).rawValue
 ```
 
-### 4. Using Vector Search
+#### 4. Using Vector Search
 
 Now we simply search through the movie embeddings using the search embedding. This sounds complex, but it is done with a simple cosine similarity search accomplished with only a few lines of code using Apple’s `Accelerate`  framework: 
 
