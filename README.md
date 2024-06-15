@@ -1,7 +1,38 @@
+> [!IMPORTANT]
+> Created by [Preternatural AI](https://preternatural.ai/), an exhaustive client-side AI infrastructure for Swift.<br/>
+> This project and the frameworks used are presently in alpha stage of development.
+
 # Movie Search: Semantic search for movies using text-embeddings.
 The MovieSearch app enables users to search for movies using natural language queries, providing a more intuitive and efficient search experience. This app demonstrates working with the OpenAI API, structuring training data, implementing Retrieval-Augmented Generation (RAG), and using text embeddings to add semantic search to any application.
+<br/><br/>
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/PreternaturalAI/AI/blob/main/LICENSE)
 
-## Installation
+## Usage
+#### Supported Platforms
+<!-- choose only the relevant platforms-->
+<!-- macOS-->
+<p align="left">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos-active.svg">
+  <img alt="macos" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos-active.svg" height="24">
+</picture>&nbsp;
+
+<!--iPhone-->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios-active.svg">
+  <img alt="ios" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios-active.svg" height="24">
+</picture>&nbsp;
+
+<!-- iPad-->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados-active.svg">
+  <img alt="ipados" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados-active.svg" height="24">
+</picture>&nbsp;
+
+</p>
 To install and run the Movie Search app: 
 
 1. Download and open the project
@@ -33,19 +64,20 @@ Other searches to try out:
 
 ## Table of Contents
 - [Key Concepts](#key-concepts)
-- [Why Use Text Embeddings for Search?](#why-use-text-embeddings-for-search)
-- [The Movie Search App Example](#the-movie-search-app-example)
-- [Concepts to Understand](#concepts-to-understand)
-  - [Text Embeddings](#text-embeddings)
-  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-- [Movie Search Implementation](#movie-search-implementation)
-  - [1. Preparing the Data](#1-preparing-the-data)
-  - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
-  - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
-    - [3a. Use an LLM to Modify the Search Query](#3a-use-an-llm-to-modify-the-search-query)
-    - [3b. Now Convert the Modified Search Query into a Text Embedding](#3b-now-convert-the-modified-search-query-into-a-text-embedding)
-  - [4. Using Vector Search](#4-using-vector-search)
-- [Conclusion](#conclusion)
+- [Technical Specifications](#technical-implementation)
+	- [Why Use Text Embeddings for Search?](#why-use-text-embeddings-for-search)
+	- [The Movie Search App Example](#the-movie-search-app-example)
+	- [Concepts to Understand](#concepts-to-understand)
+	  - [Text Embeddings](#text-embeddings)
+	  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+	- [Movie Search Implementation](#movie-search-implementation)
+	  - [1. Preparing the Data](#1-preparing-the-data)
+	  - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
+	  - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
+	    - [3a. Use an LLM to Modify the Search Query](#3a-use-an-llm-to-modify-the-search-query)
+	    - [3b. Now Convert the Modified Search Query into a Text Embedding](#3b-now-convert-the-modified-search-query-into-a-text-embedding)
+	  - [4. Using Vector Search](#4-using-vector-search)
+	- [Conclusion](#conclusion)
 - [FAQ](#faq)
   - [How to work with larger datasets?](#how-to-work-with-larger-datasets)
   - [How to get text embeddings for larger texts?](#how-to-get-text-embeddings-for-larger-texts)
@@ -60,14 +92,15 @@ The Movie Search app is developed to demonstrate the the following key concepts:
 - Retrieval-Augmented Generation (RAG)
 - How to Implement Advanced Generalized Search (e.g. 'romantic movies in New York City')
 
-## Why Use AI for Search?
+## Technical Specifications
+### Why Use AI for Search?
 In traditional software development, search is very limited. Customers are expected to search for exact or partially matching expressions that match database column values. Companies with higher budgets can take the time to add certain shortcuts that customers have to discover or learn about if they’re ambitious to make search easier. For example, in Gmail Search I can specify “from:[EMAIL_ADDRESS]” and get more accurate results. There is even Advanced Search where I can be a lot more specific:
 
 <img width="712" alt="Screenshot 2024-06-06 at 10 16 02 AM" src="https://github.com/preternatural-explore/AIMovieSearch/assets/1157147/9cdb96de-c9e7-4954-9fec-7600c8804afc"><br />
 
 However, this search methodology doesn’t work in the way we, as humans, think when searching. Sometimes we want to search for “that email about what everyone is supposed to bring to the family reunion party” or “the email from my accountant with my 2022 tax return”.  By integrating AI into the search process, we can create a search experience that is natural language based, allowing for a much more effortless search experience. 
 
-## The Movie Search App Example
+### The Movie Search App Example
 
 We will use the example of a Movie Plots App (similar to IMBD) to illustrate how to integrate AI-powered search into any application. This app helps customers decide which movie they want to watch. Instead of entering movie titles directly, customers search freely for:
 
@@ -87,11 +120,11 @@ We will use the example of a Movie Plots App (similar to IMBD) to illustrate how
 
 Run the app and experiment with some of the above search queries to see the results!
 
-## Concepts to Understand
+### Concepts to Understand
 
 Before going into the implementation details for the Movie Search app, there are two concepts which are important to understand:
 
-### Text Embeddings
+#### Text Embeddings
 
 Text embedding models are translators for machines. They convert text, such as sentences or paragraphs, into sets of numbers, which the machine can easily use in complex calculations. Letters that appear close together extremely often are called tokens and are assigned a number. A full phrase is converted into an array of numbers which correspond to tokens. 
 
@@ -105,7 +138,7 @@ The reason that Large Language Models (LLMs) are so powerful is because they do 
 
 The calculations are based on probabilities of the next most likely tokens based on their appearance in the training data. Once the calculations are done, the LLM outputs an array of numbers (a vector), which then gets converted into corresponding tokens, creating human-readable text. 
 
-### Retrieval-Augmented Generation (RAG)
+#### Retrieval-Augmented Generation (RAG)
 
 If you try to research about RAGs, you’ll undoubtedly come across many complicated and confusing scientific papers, blog posts, discussions, etc. However, at its core, Retrieval-Augmented Generation (RAG) is simply an overarching concept with a variety of implementation techniques for connecting a Large Language Model (LLM) to an external data source. 
 
@@ -128,9 +161,9 @@ This RAG pipeline can be conceptually broken down into the following steps:
 
 The AI Movie Search app uses the RAG strategy. The app itself has a database (in the form a csv) of movie information, which the LLM will be using as the external source of data to search through. The exact implementation is slightly different than the simplified version above, the details of which are in the implementation section below. 
 
-## Movie Search Implementation
+### Movie Search Implementation
 
-### 1. Preparing the Data
+#### 1. Preparing the Data
 
 The most important and tedious step in working with LLMs is ensuring that you have a good clean data source. The “garbage in, garbage out” rule highly applies here. This includes cleaning and structuring the data effectively. 
 
@@ -146,7 +179,7 @@ Knowing the strengths and limitations of your dataset is crucial, as these weakn
 
 The final dataset is included in the app as a `movieData.csv` file in the `Resources` folder. The `CSVDataManager` converts the data in the CSV file into SwiftData models when the app is opened by the customer for the first time. 
 
-### 2. Converting the Data to Text Embeddings
+#### 2. Converting the Data to Text Embeddings
 
 When working with database columns, the data source is disjointed. That is why it is so hard to search for movies by a specific director, for example - most apps will just have regex-based search done on the movie title column. Only in Advanced Search you can specify the director, which will then do a lookup in the director column. 
 
@@ -194,7 +227,7 @@ Taking a closer look at one row, we can see the full text embedding - what one m
 
 From this, we can see that the magic of LLMs comes down to doing calculations with numbers  :) 
 
-### 3. Converting the Search Query to an Embedding
+#### 3. Converting the Search Query to an Embedding
 
 Now that we’ve done the backend work of converting our datasource into text embeddings, we focus to the front-end. What happens when the user enters a search query such as “a thriller in London”. 
 
@@ -366,6 +399,7 @@ In the movie search app example, we were able to provide an array of all movie d
 
 This would involve a more complex strategy of chunking (or splitting up the text) into several parts. However, this might get complicated as you would need to know exactly where to split up the text and the search might get complicated as LLMs need the full context for effective search. As of now OpenAI is building it’s own vector database where you can upload the files and the embeddings and search will be managed for you.
 
+# License
 
-
+This package is licensed under the [MIT License](https://github.com/PreternaturalAI/AI/blob/main/LICENSE).
 
