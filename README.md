@@ -407,7 +407,7 @@ This would involve a more complex strategy of chunking (or splitting up the text
 # Acknowledgements
 
 StarRatingViewSwiftUI
-- **Link**: [https://github.com/magickworx/StarRatingViewSwiftUI](https://link-to-framework](https://github.com/magickworx/StarRatingViewSwiftUI))
+- **Link**: [https://github.com/magickworx/StarRatingViewSwiftUI](https://github.com/magickworx/StarRatingViewSwiftUI))
 - **License**: [MIT License](https://github.com/magickworx/StarRatingViewSwiftUI/blob/main/LICENSE)
 - **Authors**: Kouichi ABE (WALL) and StarRatingViewSwiftUI contributors
 
