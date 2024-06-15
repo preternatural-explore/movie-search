@@ -64,7 +64,8 @@ Other searches to try out:
 
 ## Table of Contents
 - [Key Concepts](#key-concepts)
-- [Technical Specifications](#technical-implementation)
+- [Preternatural Frameworks](#preternatural-frameworks)
+- [Technical Specifications](#technical-specifications)
 	- [Why Use AI for Search?](#why-use-ai-for-search)
 	- [The Movie Search App Example](#the-movie-search-app-example)
 	- [Concepts to Understand](#concepts-to-understand)
@@ -79,6 +80,8 @@ Other searches to try out:
 - [FAQ](#faq)
   - [How to work with larger datasets?](#how-to-work-with-larger-datasets)
   - [How to get text embeddings for larger texts?](#how-to-get-text-embeddings-for-larger-texts)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## Key Concepts
 
@@ -89,6 +92,10 @@ The Movie Search app is developed to demonstrate the the following key concepts:
 - How to work with Text Embeddings
 - Retrieval-Augmented Generation (RAG)
 - How to Implement Advanced Generalized Search (e.g. 'romantic movies in New York City')
+
+## Preternatural Frameworks
+The following Preternatural Frameworks were used in this project: 
+- [AI](https://github.com/PreternaturalAI/AI): The definitive, open-source Swift framework for interfacing with generative AI.
 
 ## Technical Specifications
 ### Why Use AI for Search?
@@ -396,6 +403,13 @@ In that case, the data would be stored in a database on the server. In addition 
 In the movie search app example, we were able to provide an array of all movie descriptions to the OpenAI API and get back the results. But what if we have a set of very large texts that would be too big to put into an array?
 
 This would involve a more complex strategy of chunking (or splitting up the text) into several parts. However, this might get complicated as you would need to know exactly where to split up the text and the search might get complicated as LLMs need the full context for effective search. As of now OpenAI is building it’s own vector database where you can upload the files and the embeddings and search will be managed for you.
+
+# Acknowledgements
+
+StarRatingViewSwiftUI
+- **Link**: [https://github.com/magickworx/StarRatingViewSwiftUI](https://link-to-framework](https://github.com/magickworx/StarRatingViewSwiftUI))
+- **License**: [MIT License](https://github.com/magickworx/StarRatingViewSwiftUI/blob/main/LICENSE)
+- **Authors**: Kouichi ABE (WALL) and StarRatingViewSwiftUI contributors
 
 # License
 
