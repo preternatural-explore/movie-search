@@ -7,6 +7,28 @@ The MovieSearch app enables users to search for movies using natural language qu
 <br/><br/>
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/PreternaturalAI/AI/blob/main/LICENSE)
 
+## Table of Contents
+- [Usage](#usage)
+- [Key Concepts](#key-concepts)
+- [Preternatural Frameworks](#preternatural-frameworks)
+- [Technical Specifications](#technical-specifications)
+	- [Why Use AI for Search?](#why-use-ai-for-search)
+	- [The Movie Search App Example](#the-movie-search-app-example)
+	- [Concepts to Understand](#concepts-to-understand)
+	  - [Text Embeddings](#text-embeddings)
+	  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+	- [Movie Search Implementation](#movie-search-implementation)
+	  - [1. Preparing the Data](#1-preparing-the-data)
+	  - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
+	  - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
+	  - [4. Using Vector Search](#4-using-vector-search)
+	- [Conclusion](#conclusion)
+- [FAQ](#faq)
+  - [How to work with larger datasets?](#how-to-work-with-larger-datasets)
+  - [How to get text embeddings for larger texts?](#how-to-get-text-embeddings-for-larger-texts)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
 ## Usage
 #### Supported Platforms
 <!-- choose only the relevant platforms-->
@@ -61,27 +83,6 @@ Other searches to try out:
 - "French romantic comedies"
 - "Movies about time travel"
 - "Action movies set in the future"
-
-## Table of Contents
-- [Key Concepts](#key-concepts)
-- [Preternatural Frameworks](#preternatural-frameworks)
-- [Technical Specifications](#technical-specifications)
-	- [Why Use AI for Search?](#why-use-ai-for-search)
-	- [The Movie Search App Example](#the-movie-search-app-example)
-	- [Concepts to Understand](#concepts-to-understand)
-	  - [Text Embeddings](#text-embeddings)
-	  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-	- [Movie Search Implementation](#movie-search-implementation)
-	  - [1. Preparing the Data](#1-preparing-the-data)
-	  - [2. Converting the Data to Text Embeddings](#2-converting-the-data-to-text-embeddings)
-	  - [3. Converting the Search Query to an Embedding](#3-converting-the-search-query-to-an-embedding)
-	  - [4. Using Vector Search](#4-using-vector-search)
-	- [Conclusion](#conclusion)
-- [FAQ](#faq)
-  - [How to work with larger datasets?](#how-to-work-with-larger-datasets)
-  - [How to get text embeddings for larger texts?](#how-to-get-text-embeddings-for-larger-texts)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
 
 ## Key Concepts
 
@@ -404,14 +405,14 @@ In the movie search app example, we were able to provide an array of all movie d
 
 This would involve a more complex strategy of chunking (or splitting up the text) into several parts. However, this might get complicated as you would need to know exactly where to split up the text and the search might get complicated as LLMs need the full context for effective search. As of now OpenAI is building it’s own vector database where you can upload the files and the embeddings and search will be managed for you.
 
-# Acknowledgements
+## Acknowledgements
 
 StarRatingViewSwiftUI
 - **Link**: [https://github.com/magickworx/StarRatingViewSwiftUI](https://github.com/magickworx/StarRatingViewSwiftUI)
 - **License**: [MIT License](https://github.com/magickworx/StarRatingViewSwiftUI/blob/main/LICENSE)
 - **Authors**: Kouichi ABE (WALL) and StarRatingViewSwiftUI contributors
 
-# License
+## License
 
 This package is licensed under the [MIT License](https://github.com/PreternaturalAI/AI/blob/main/LICENSE).
 
